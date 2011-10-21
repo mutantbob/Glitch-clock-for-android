@@ -34,13 +34,15 @@
                            android:layout_weight="0.5" />
             <TextView android:id="@+id/hhmm"
                       android:gravity="center"
-                      android:textSize="24dp"
+                      android:textSize="@dimen/hhmm_textSize"
+                      android:typeface="serif"
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:textColor="@color/hhmm_foreground"
                     />
             <TextView android:id="@+id/dmy"
                       android:gravity="center"
+                      android:typeface="serif"
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:textColor="@color/dmy_foreground"
