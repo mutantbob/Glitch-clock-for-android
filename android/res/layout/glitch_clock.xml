@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_margin="@dimen/widget_margin"
+              android:orientation="vertical"
+
+              android:id="@+id/widget"
+        >
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <ImageView android:layout_alignParentBottom="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentLeft="true"
+                   android:layout_width="fill_parent"
+                   android:layout_height="fill_parent"
+                   android:background="@drawable/widget_bgx"
+                />
+        <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                >
+            <LinearLayout  android:layout_height="1dp"
+                           android:layout_width="1dp"
+                           android:layout_weight="0.5" />
+            <TextView android:id="@+id/hhmm"
+                      android:gravity="center"
+                      android:textSize="24dp"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/hhmm_foreground"
+                    />
+            <TextView android:id="@+id/dmy"
+                      android:gravity="center"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/dmy_foreground"
+                    />
+            <LinearLayout  android:layout_height="1dp"
+                           android:layout_width="1dp"
+                           android:layout_weight="0.5" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

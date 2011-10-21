@@ -1,0 +1,5 @@
+<resources>
+    <color name="widget_background">#8000ff80</color>
+    <color name="hhmm_foreground">#000</color>
+    <color name="dmy_foreground">#000</color>
+</resources>

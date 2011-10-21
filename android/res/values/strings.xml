@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GlitchClock</string>
+    <string name="dmy_format">%1$d of %2$s, %3$d</string>
+    <string name="hhmm_format">%1$d:%2$02d</string>
+</resources>
