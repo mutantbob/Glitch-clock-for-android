@@ -8,6 +8,7 @@ import android.util.*;
 import android.widget.*;
 
 import java.text.*;
+import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -79,9 +80,6 @@ public class GlitchClockProvider
 
         if (CLOCK_WIDGET_UPDATE.equals(intent.getAction())) {
 //            Log.d(LOG_TAG, "Clock update");
-            // Get the widget manager and ids for this widget provider, then
-            // call the shared
-            // clock update method.
 
             final Resources res = context.getResources();
             final long glitchTime = glitchTimeSeconds();
@@ -111,7 +109,7 @@ public class GlitchClockProvider
 
                 PendingIntent pi = PendingIntent.getActivity(context, 0, new Intent(GLITCH_NEW_DAY), 0);
 
-                not.setLatestEventInfo(context, "New Glitch day", "Wake up and nibble the piggies!", pi);
+                not.setLatestEventInfo(context, "New Glitch day", newDayMessage(res), pi);
                 not.flags = Notification.FLAG_AUTO_CANCEL;
 
                 mgr.notify(NOTIFY_NEW_DAY, not);
@@ -122,6 +120,14 @@ public class GlitchClockProvider
             }
         }
 
+    }
+
+    protected static Random rand = new Random();
+    public String newDayMessage(Resources res)
+    {
+        String[] strings = res.getString(R.string.new_day_greetings).split("\\|");
+        return strings[rand.nextInt(strings.length)].trim();
+//        return "Wake up and nibble the piggies!";
     }
 
     private PendingIntent createClockTickIntent(Context context)

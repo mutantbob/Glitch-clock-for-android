@@ -3,4 +3,9 @@
     <string name="app_name">GlitchClock</string>
     <string name="dmy_format">%1$d of %2$s, %3$d</string>
     <string name="hhmm_format">%1$d:%2$02d</string>
+    <string name="new_day_greetings">Wake up and nibble the piggies!
+        |Time to hug the chickens!
+        |Wake up and smell the General Vapour
+        |A sparkly rock is waiting for you to pick it.
+        |Grab your hoe and get dirty.</string>
 </resources>
