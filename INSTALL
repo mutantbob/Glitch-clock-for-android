@@ -1,0 +1,61 @@
+ANDROID MARKET
+
+I haven't bothered to figure out how to upload this to the Android
+market yet.
+
+
+
+
+
+BINARY INSTALL
+
+Get the Android SDK from http://developer.android.com/sdk/index.html
+
+Download a pre-compiled .apk from http://developer.android.com/sdk/index.html
+
+http://www.purplefrog.com/~thoth/glitch-clock/
+
+Connect your phone to the computer using a USB cable and
+
+$ <ANDROID_SDK>/platform-tools/adb install -r GlitchClock-debug.apk
+
+
+
+
+
+COMPILE FROM SOURCE
+
+Get the Android SDK from http://developer.android.com/sdk/index.html
+
+To prepare the project for building :
+
+$ cd Glitch-clock-for-android/android
+$ android update project --path . --name GlitchClock
+
+You should not have to do that again unless something changes
+drastically in the project.
+
+Every time you change the source and want to build a new version and
+install it on your phone:
+
+$ ant clean debug
+    #connect your phone to the computer via a USB cable for this next step
+$ adb install -r bin/GlitchClock-debug.apk
+
+
+The "clean" is not usually necessary, but when you're adding resources,
+sometimes android changes the constants in the R.java file and classes
+compiled against the old version of R.java sprout bugs and crash.
+
+
+
+
+
+AFTER INSTALLATION
+
+Once it is installed on the phone you can place the widget on the home
+screen of your phone by pressing your finger on an empty cell and
+holding it until a menu appears.  One of the menu options is Widgets.
+Select the Glitch Clock from the list.  The glitch clock takes up 2
+side-by-side cells, so if you don't have enough space, the phone won't
+let you place it.
