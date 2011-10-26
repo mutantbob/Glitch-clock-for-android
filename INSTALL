@@ -32,7 +32,9 @@ Get the Glitch SDK from https://github.com/tinyspeck/glitch-android-sdk ; use
 
 git clone https://github.com/tinyspeck/glitch-android-sdk.git
 
-to check out their source next to the Glitch-clock-for-android/ directory.
+to check out their source next to the Glitch-clock-for-android/
+directory.  If you store it somewhere else you will have to alter the
+default.properties file
 
 
 To prepare the project for building :
