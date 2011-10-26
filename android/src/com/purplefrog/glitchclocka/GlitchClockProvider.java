@@ -47,6 +47,9 @@ public class GlitchClockProvider
         rv.setTextViewText(R.id.hhmm, hhmm);
         rv.setTextViewText(R.id.dmy, dmy);
 
+        Intent intent = new Intent(context, LearningReadout.class);
+        rv.setOnClickPendingIntent(R.id.widget, PendingIntent.getActivity(context, 0, intent, 0));
+
         appWidgetManager.updateAppWidget(appWidgetId, rv);
     }
 

@@ -5,7 +5,18 @@
           android:versionName="1.0">
 
     <application android:label="@string/app_name"
-            android:icon="@drawable/glitch">
+                 android:icon="@drawable/glitch">
+
+        <activity
+                android:name="LearningReadout">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="glitchandroidsdk"/>
+            </intent-filter>
+        </activity>
+
         <receiver android:name="GlitchClockProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -15,5 +26,8 @@
                        android:resource="@xml/glitch_clock_info" />
         </receiver>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest> 

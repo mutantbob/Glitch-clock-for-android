@@ -27,6 +27,14 @@ COMPILE FROM SOURCE
 
 Get the Android SDK from http://developer.android.com/sdk/index.html
 
+
+Get the Glitch SDK from https://github.com/tinyspeck/glitch-android-sdk ; use 
+
+git clone https://github.com/tinyspeck/glitch-android-sdk.git
+
+to check out their source next to the Glitch-clock-for-android/ directory.
+
+
 To prepare the project for building :
 
 $ cd Glitch-clock-for-android/android
