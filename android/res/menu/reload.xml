@@ -11,4 +11,7 @@
           android:icon="@drawable/scan_icon"
           android:title="@string/refresh"
             />
+    <item android:id="@+id/about"
+          android:title="@string/about"
+            />
 </menu>

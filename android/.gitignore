@@ -1,0 +1,5 @@
+build.xml
+gen
+*.iml
+local.properties
+src/com/purplefrog/glitchclocka/DontCheckInToGit.java

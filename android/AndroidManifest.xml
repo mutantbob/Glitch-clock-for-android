@@ -25,6 +25,8 @@
             <meta-data android:name="android.appwidget.provider"
                        android:resource="@xml/glitch_clock_info" />
         </receiver>
+
+        <activity android:name="AboutActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

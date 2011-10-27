@@ -1,3 +1,22 @@
+/*
+    Copyright (C) 2011 Robert Forsman
+
+    This file is part of Glitch clock for android.
+
+    Glitch clock for android is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Glitch clock for android is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Glitch clock for android.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package com.purplefrog.glitchclocka;
 
 import android.app.*;
@@ -158,6 +177,13 @@ public class LearningReadout
         switch (item.getItemId()) {
             case R.id.refresh:
                 refreshLearningData();
+                return true;
+            case R.id.about:
+                if (true) {
+                    startActivity(new Intent(this, AboutActivity.class));
+                } else {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("file:///android_asset/about.html")));
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
